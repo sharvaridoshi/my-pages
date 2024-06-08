@@ -1,25 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>
-  </title>
-   <link rel="stylesheet"  href="css/stylesheet.css">
-  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Table Cheat Sheet</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #555;
+    }
+
+    table {
+      width: 100%;
+      max-width: 100%;
+      margin: 20px auto;
+      border-collapse: collapse;
+      box-shadow: 0 2px 15px rgba(64, 64, 64, 0.1);
+      border-radius: 12px;
+      overflow: hidden;
+      background-color: #fff;
+    }
+
+    thead {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    th, td {
+      padding: 12px 15px;
+      text-align: left;
+    }
+
+    th {
+      font-size: 18px;
+    }
+
+    tbody tr {
+      border-bottom: 1px solid #ddd;
+    }
+
+    tbody tr:nth-of-type(even) {
+      background-color: #f3f3f3;
+    }
+
+    tbody tr:hover {
+      background-color: #f1f1f1;
+    }
+
+    @media screen and (max-width: 600px) {
+      table, thead, tbody, th, td, tr {
+        display: block;
+      }
+
+      thead tr {
+        display: none;
+      }
+
+      tbody tr {
+        margin-bottom: 10px;
+      }
+
+      td {
+        padding-left: 50%;
+        position: relative;
+      }
+
+      td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 15px;
+        font-weight: bold;
+        background-color: #f9f9f9;
+        border-right: 1px solid #ddd;
+      }
+    }
+  </style>
 </head>
 <body>
-  <header class="header">
-    <div class="image-container">
-      <img src="images/pattern.webp" alt="Header Image">
-      <div class="overlay-text"><h1>Dasmoto's Arts and Crafts</h1></div>
-    </div>
-  </header>
-<main>
-<h1> Akhil</h1>
-</main>
-<footer>
-
-</footer>
-
+  <h1>HTML Table Reference</h1>
+  <h2>Table Tags</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Tag</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td data-label="Tag">&lt;table&gt;</td>
+        <td data-label="Name">Table</td>
+        <td data-label="Description">The wrapper element of all table elements</td>
+      </tr>
+      <!-- Add more rows as needed -->
+    </tbody>
+    <tfoot>
+      <!-- You can add footer content here if needed -->
+    </tfoot>
+  </table>
 </body>
-
 </html>
+
